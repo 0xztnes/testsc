@@ -30,13 +30,6 @@ do
 
 
 
-    Tabs.Main:AddParagraph({
-        Title = "Paragraph",
-        Content = "This is a paragraph.\nSecond line!"
-    })
-
-
-
     Tabs.Main:AddButton({
         Title = "Button",
         Description = "Very important button",
