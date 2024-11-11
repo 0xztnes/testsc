@@ -15,7 +15,7 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),
-    Account = Window:AddTab({ Title = "Account", Icon = "icons"}),
+    Account = Window:AddTab({ Title = "Account", Icon = "account"}),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -28,6 +28,15 @@ do
         SubContent = "", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
     })
+
+
+
+    Tabs.Main:AddParagraph({
+        Title = "Paragraph",
+        Content = "This is a paragraph.\nSecond line!"
+    })
+
+
 
     Tabs.Main:AddButton({
         Title = "Button",
@@ -67,17 +76,15 @@ do
 
     
     local Slider = Tabs.Main:AddSlider("Slider", {
-        Title = "WalkSpeed",
-        Description = "This is a WalkSpeed",
-        Min = 20,
-        Max = 500,
-        Default = 5,
-        Color = Color3.fromRGB(255,255,255),
-        Increment = 1,
-        ValueName = "Speed",
+        Title = "Slider",
+        Description = "This is a slider",
+        Default = 2,
+        Min = 0,
+        Max = 5,
+        Rounding = 1,
         Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-    end    
+            print("Slider was changed:", Value)
+        end
     })
 
     Slider:OnChanged(function(Value)
