@@ -31,9 +31,17 @@ do
 
 
 
-    Tabs.Main:AddParagraph({
-        Title = "Paragraph",
-        Content = "This is a paragraph.\nSecond line!"
+    Tabs.Main:AddSlider({
+        Name = "WalkSpeed",
+        Min = 20,
+        Max = 500,
+        Default = 5,
+        Color = Color3.fromRGB(255,255,255),
+        Increment = 1,
+        ValueName = "Speed",
+        Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+    end    
     })
 
 
