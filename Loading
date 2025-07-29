@@ -12,13 +12,10 @@ getgenv().ConfigsKaitun = {
 		["Safe Tree"] = {
 			"Moon Blossom",
 			"Serenity",
-			"Burning Bud",
 			"Embar Lily",
-			"Cacao",
 			"Sugar Apple",
 			"Spiked Mango",
 			"Giant Pinecone",
-		  	"Beanstalk",
 			"Fossilight",
 
 			-- locked fruit for zen event
