@@ -128,8 +128,7 @@ getgenv().ConfigsKaitun = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 8, 75, 1 },
-				["Kodama"] = { 2, 100, 2 },
-				["Corrupted Kodama"] = { 2, 100, 3 },
+				["Kodama"] = { 8, 100, 1 },
 			},
 			["Limit Upgrade"] = 1,
 			["Equip When Done"] = {
