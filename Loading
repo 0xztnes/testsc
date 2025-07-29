@@ -10,21 +10,13 @@ getgenv().ConfigsKaitun = {
 		["Destroy Untill"] = 150,
 
 		["Safe Tree"] = {
-			"Moon Blossom",
 			"Serenity",
 			"Embar Lily",
 			"Sugar Apple",
-			"Spiked Mango",
-			"Giant Pinecone",
-			"Fossilight",
 
 			-- locked fruit for zen event
 			["Serenity"] = 50, ["Strawberry"] = 1, ["Blueberry"] = 1,
 			["Orange Tulip"] = 1, ["Corn"] = 1, ["Daffodil"] = 1,
-			["Bamboo"] = 1, ["Apple"] = 1, ["Coconut"] = 1,
-			["Pumpkin"] = 1, ["Watermelon"] = 1, ["Cactus"] = 1,
-			["Dragon Fruit"] = 1, ["Mango"] = 1, ["Grape"] = 1,
-			["Mushroom"] = 1, ["Pepper"] = 1, ["Cacao"] = 1
 		}
 	},
 
@@ -120,23 +112,9 @@ getgenv().ConfigsKaitun = {
 
 	Gear = {
 		Buy = { 
-			"Watering Can",
-			"Trowel",
-			"Recall Wrench",
-			"Magnifying Glass",
-			"Tanning Mirror",
-			"Cleaning Spray",
-			"Favorite Tool",
-			"Harvest Tool",
-			"Friendship Pot",
-			"Master Sprinkler",
-			"Basic Sprinkler",
-			"Godly Sprinkler",
-			"Advanced Sprinkler",
 			"Medium Toy",
 			"Medium Treat",
 			"Levelup Lollipop",
-			"Lightning Rod",
 		},
 		Lock = {
 		},
