@@ -1,248 +1,263 @@
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+getgenv().ConfigsKaitun = {
+	["Block Pet Gift"] = true,
+	
+	["Low Cpu"] = true,
+	["Auto Rejoin"] = true,
+	
+	["Rejoin When Update"] = false,
+	["Limit Tree"] = {
+		["Limit"] = 200,
+		["Destroy Untill"] = 150,
 
-local Window = Fluent:CreateWindow({
-    Title = "MOONFALL ",
-    SubTitle = "by 0xztnes",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
-    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
-})
+		["Safe Tree"] = {
+			"Moon Blossom",
+			"Serenity",
+			"Burning Bud",
+			"Embar Lily",
+			"Cacao",
+			"Sugar Apple",
+			"Spiked Mango",
+			"Giant Pinecone",
+		  	"Beanstalk",
+			"Fossilight",
 
---Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
-local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "home" }),
-    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+			-- locked fruit for zen event
+			["Tomato"] = 1, ["Strawberry"] = 1, ["Blueberry"] = 1,
+			["Orange Tulip"] = 1, ["Corn"] = 1, ["Daffodil"] = 1,
+			["Bamboo"] = 1, ["Apple"] = 1, ["Coconut"] = 1,
+			["Pumpkin"] = 1, ["Watermelon"] = 1, ["Cactus"] = 1,
+			["Dragon Fruit"] = 1, ["Mango"] = 1, ["Grape"] = 1,
+			["Mushroom"] = 1, ["Pepper"] = 1, ["Cacao"] = 1
+		}
+	},
+
+	Seed = {
+		Buy = {
+			Mode = "Auto", -- Custom , Auto
+			Custom = {
+				"Serenity",
+				"Carrot",
+				"Bamboo",
+				"Pumpkin",
+				"Daffodil",
+				"Orange Tulip",
+				"Watermelon",
+				"Mushroom",
+				"Avocado",
+				"Feijoa",
+				"Cauliflower",
+				"Loquat",
+				"Green Apple",
+				"Nightshade",
+				"Firefly Fern",
+				"Soft Sunshine",
+				"Zen Rocks",
+				"Hinomai",
+				"Beanstalk",
+				"Ember Lily",
+				"Sunflower",
+				"Sugar Apple",
+				"Burning Bud",
+				"Giant Pinecone",
+				"Spiked Mango",
+			}
+		},
+		Place = {
+			Mode = "Lock", -- Select , Lock
+			Select = {
+				"Carrot"
+			},
+			Lock = {
+				"Maple Apple",
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Tranquil Bloom",
+				"Moon Melon",
+				"Easter Egg",
+				"Moon Mango",
+				"Bone Blossom",
+				"Fossilight",
+			}
+		}
+	},
+
+	["Seed Pack"] = {
+		Locked = {
+
+		}
+	},
+
+	Events = {
+		["Zen Event"] = {
+			["Restocking"] = { -- Minimumthing to restock
+				Max_Restocks_Price = 3_000_000,
+				Minimum_Money = 500_000,
+				Minimum_Chi = 30
+			},
+			["Doing"] = {
+				Minimum_Money = 1000, -- minimum money to start play this event
+				First_Upgrade_Tree = 1,
+				Maximum_Chi = 50,
+			}
+		},
+		["Traveling Shop"] = {
+			"Bee Egg",
+		},
+		Craft = {
+			"Primal Egg",
+			"Anti Bee Egg",
+			"Small Toy",
+			"Small Treat",
+			"Ancient Seed Pack",
+		},
+		Shop = {
+			"Zen Egg",
+			"Zen Seed Pack",
+			"Soft Sunshine",
+			"Sakura Bush",
+			"Raiju",
+			"Zenflare",
+		},
+	},
+
+	Gear = {
+		Buy = { 
+			"Watering Can",
+			"Trowel",
+			"Recall Wrench",
+			"Magnifying Glass",
+			"Tanning Mirror",
+			"Cleaning Spray",
+			"Favorite Tool",
+			"Harvest Tool",
+			"Friendship Pot",
+			"Master Sprinkler",
+			"Basic Sprinkler",
+			"Godly Sprinkler",
+			"Advanced Sprinkler",
+			"Medium Toy",
+			"Medium Treat",
+			"Levelup Lollipop",
+			"Lightning Rod",
+		},
+		Lock = {
+		},
+	},
+
+	Eggs = {
+		Place = {
+			"Zen Egg",
+			"Anti Bee Egg",
+			"Bug Egg",
+			"Paradise Egg",
+			"Common Summer Egg",
+		},
+		Buy = {
+			"Anti Bee Egg",
+			"Bee Egg",
+			"Night Egg",
+			"Bug Egg",
+			"Paradise Egg",
+			"Mythical Egg",
+			"Rare Egg",
+			"Rare Summer Egg",
+			"Common Summer Egg",
+			"Common Egg",
+		}
+	},
+
+	Pets = {
+		["Start Delete Pet At"] = 40,
+		["Upgrade Slot"] = {
+			["Pet"] = {
+				["Starfish"] = { 8, 100, 1 },
+			},
+			["Limit Upgrade"] = 5,
+			["Equip When Done"] = {
+				["Tanchozuru"] = { 4, 100, 5 },
+				["Kodama"] = { 4, 100, 1 },
+				["Corrupted Kodama"] = { 4, 100, 2 },
+			},
+		},
+		Locked_Pet_Age = 50, -- pet that age > 60 will lock
+		Locked = {
+			"Corrupted Kitsune",
+			"Corrupted Kodama",
+			"Raiju",
+			"Kitsune",
+			"Tanchozuru",
+			"Disco Bee",
+			"Butterfly",
+			"Queen Bee",
+			"Dragonfly",
+			"Raccoon",
+			"Red Fox",
+			"Mimic Octopus",
+			"Hyacinth Macaw",
+			"Brontosaurus",
+			"Dilophosaurus",
+			"Ankylosaurus",
+			"Spinosaurus",
+			"T-Rex",
+			["Seagull"] = 5,
+			["Shiba Inu"] = 5,
+			["Nihonzaru"] = 5,
+			["Stegosaurus"] = 5,
+			["Peacock"] = 5,
+			["Triceratops"] = 5,
+			["Pterodactyl"] = 2,
+			["Toucan"] = 5,
+			["Capybara"] = 5,
+			["Bunny"] = 5,
+			["Golden Lab"] = 5,
+			["Bee"] = 3,
+			["Bunny"] = 5,
+			["Golden Lab"] = 5,
+		},
+		LockPet_Weight = 5, -- if Weight >= 10 they will locked,
+		Instant_Sell = {		
+			"Shiba Inu",
+			"Dog",
+		}
+	},
+
+	Webhook = {
+        UrlPet = "https://discord.com/api/webhooks/1392524927059628204/7IM9d3MXyDc4pDdGwCketDGF7Dq6LbmWXFxDXzyXvIMhdlzqDKJ42JXukKzvH2y2M8OX",
+        UrlSeed = "https://discord.com/api/webhooks/1392525050984267849/WXg4I0Lg0j6Os1p33BxSL1A95g79OY7_fPH6d8EM-P4rh8u12YmSZKtL0O7LYNY_O-Ky",
+        PcName = "SUPERCOMPUTER-NASA-888",
+
+		Noti = {
+			Seeds = {
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Bone Blossom",
+				"Dragon Sapling",
+                "Maple Apple",
+			},
+			SeedPack = {
+				"Idk"
+			},
+			Pets = {
+				"Corrupted Kitsune",
+				"Corrupted Kodama",
+				"Raiju",
+				"Kitsune",
+				"T-Rex",
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Fennec Fox",
+				"Queen Bee",
+				"Dragonfly",
+				"Raccoon",
+				"Spinosaurus",
+			},
+			Pet_Weight_Noti = true,
+		}
+	},
 }
-
-local Options = Fluent.Options
-
-do
-    Fluent:Notify({
-        Title = "Notification",
-        Content = "MOONFALL SUCCESS!",
-        SubContent = "", -- Optional
-        Duration = 5 -- Set to nil to make the notification not disappear
-    })
-
-
-
-    Tabs.Main:AddButton({
-        Title = "Button",
-        Description = "Very important button",
-        Callback = function()
-            Window:Dialog({
-                Title = "Title",
-                Content = "This is a dialog",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-                            print("Confirmed the dialog.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            print("Cancelled the dialog.")
-                        end
-                    }
-                }
-            })
-        end
-    })
-
-
-
-    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Toggle", Default = false })
-
-    Toggle:OnChanged(function()
-        print("Toggle changed:", Options.MyToggle.Value)
-    end)
-
-    Options.MyToggle:SetValue(false)
-
-
-    
-    local Slider = Tabs.Main:AddSlider("Slider", {
-        Name = "WalkSpeed",
-        Min = 20,
-        Max = 500,
-        Default = 5,
-        Color = Color3.fromRGB(255,255,255),
-        Increment = 1,
-        ValueName = "Speed",
-        Callback = function(Value)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
-    end 
-    })
-
-
-
-    local Dropdown = Tabs.Main:AddDropdown("Dropdown", {
-        Title = "Dropdown",
-        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
-        Multi = false,
-        Default = 1,
-    })
-
-    Dropdown:SetValue("four")
-
-    Dropdown:OnChanged(function(Value)
-        print("Dropdown changed:", Value)
-    end)
-
-
-    
-    local MultiDropdown = Tabs.Main:AddDropdown("MultiDropdown", {
-        Title = "Dropdown",
-        Description = "You can select multiple values.",
-        Values = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen"},
-        Multi = true,
-        Default = {"seven", "twelve"},
-    })
-
-    MultiDropdown:SetValue({
-        three = true,
-        five = true,
-        seven = false
-    })
-
-    MultiDropdown:OnChanged(function(Value)
-        local Values = {}
-        for Value, State in next, Value do
-            table.insert(Values, Value)
-        end
-        print("Mutlidropdown changed:", table.concat(Values, ", "))
-    end)
-
-
-
-    local Colorpicker = Tabs.Main:AddColorpicker("Colorpicker", {
-        Title = "Colorpicker",
-        Default = Color3.fromRGB(96, 205, 255)
-    })
-
-    Colorpicker:OnChanged(function()
-        print("Colorpicker changed:", Colorpicker.Value)
-    end)
-    
-    Colorpicker:SetValueRGB(Color3.fromRGB(0, 255, 140))
-
-
-
-    local TColorpicker = Tabs.Main:AddColorpicker("TransparencyColorpicker", {
-        Title = "Colorpicker",
-        Description = "but you can change the transparency.",
-        Transparency = 0,
-        Default = Color3.fromRGB(96, 205, 255)
-    })
-
-    TColorpicker:OnChanged(function()
-        print(
-            "TColorpicker changed:", TColorpicker.Value,
-            "Transparency:", TColorpicker.Transparency
-        )
-    end)
-
-
-
-    local Keybind = Tabs.Main:AddKeybind("Keybind", {
-        Title = "KeyBind",
-        Mode = "Toggle", -- Always, Toggle, Hold
-        Default = "LeftControl", -- String as the name of the keybind (MB1, MB2 for mouse buttons)
-
-        -- Occurs when the keybind is clicked, Value is `true`/`false`
-        Callback = function(Value)
-            print("Keybind clicked!", Value)
-        end,
-
-        -- Occurs when the keybind itself is changed, `New` is a KeyCode Enum OR a UserInputType Enum
-        ChangedCallback = function(New)
-            print("Keybind changed!", New)
-        end
-    })
-
-    -- OnClick is only fired when you press the keybind and the mode is Toggle
-    -- Otherwise, you will have to use Keybind:GetState()
-    Keybind:OnClick(function()
-        print("Keybind clicked:", Keybind:GetState())
-    end)
-
-    Keybind:OnChanged(function()
-        print("Keybind changed:", Keybind.Value)
-    end)
-
-    task.spawn(function()
-        while true do
-            wait(1)
-
-            -- example for checking if a keybind is being pressed
-            local state = Keybind:GetState()
-            if state then
-                print("Keybind is being held down")
-            end
-
-            if Fluent.Unloaded then break end
-        end
-    end)
-
-    Keybind:SetValue("MB2", "Toggle") -- Sets keybind to MB2, mode to Hold
-
-
-    local Input = Tabs.Main:AddInput("Input", {
-        Title = "Input",
-        Default = "Default",
-        Placeholder = "Placeholder",
-        Numeric = false, -- Only allows numbers
-        Finished = false, -- Only calls callback when you press enter
-        Callback = function(Value)
-            print("Input changed:", Value)
-        end
-    })
-
-    Input:OnChanged(function()
-        print("Input updated:", Input.Value)
-    end)
-end
-
-
--- Addons:
--- SaveManager (Allows you to have a configuration system)
--- InterfaceManager (Allows you to have a interface managment system)
-
--- Hand the library over to our managers
-SaveManager:SetLibrary(Fluent)
-InterfaceManager:SetLibrary(Fluent)
-
--- Ignore keys that are used by ThemeManager.
--- (we dont want configs to save themes, do we?)
-SaveManager:IgnoreThemeSettings()
-
--- You can add indexes of elements the save manager should ignore
-SaveManager:SetIgnoreIndexes({})
-
--- use case for doing it this way:
--- a script hub could have themes in a global folder
--- and game configs in a separate folder per game
-InterfaceManager:SetFolder("FluentScriptHub")
-SaveManager:SetFolder("FluentScriptHub/specific-game")
-
-InterfaceManager:BuildInterfaceSection(Tabs.Settings)
-SaveManager:BuildConfigSection(Tabs.Settings)
-
-
-Window:SelectTab(1)
-
-Fluent:Notify({
-    Title = "Fluent",
-    Content = "The script has been loaded.",
-    Duration = 8
-})
-
--- You can use the SaveManager:LoadAutoloadConfig() to load a config
--- which has been marked to be one that auto loads!
-SaveManager:LoadAutoloadConfig()
+License = "v8ysS9aq1BxyhsZ84I4Lf5ZN4krGQN8j"
+ 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
