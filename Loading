@@ -150,7 +150,7 @@ getgenv().ConfigsKaitun = {
 				["Kodama"] = { 2, 100, 2 },
 				["Corrupted Kodama"] = { 2, 100, 3 },
 			},
-			["Limit Upgrade"] = 5,
+			["Limit Upgrade"] = 1,
 			["Equip When Done"] = {
 				["Kodama"] = { 4, 100, 1 },
 				["Corrupted Kodama"] = { 8, 100, 2 },
