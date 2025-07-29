@@ -47,6 +47,7 @@ end
         },
         Pet = {
             "Corrupted Kitsune",
+            "Kitsune",
             "Mimic Octopus",
             "Dragonfly"
         }
