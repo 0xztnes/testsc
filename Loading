@@ -48,13 +48,15 @@ _G.TradeManage = {
         "KingSentz645770",
         "OrvilleuMoEfH",
         "SafiyaAlShafee72",
-        "NoahXShop"
+        "NoahXShop",
+		"Ayoshipship"
     },
     Pet = {
         "Corrupted Kitsune",
         "Kitsune",
         "Mimic Octopus",
-        "Dragonfly"
+        "Dragonfly",
+		"Dilophosaurus"
     }
 }
 if hasTargetPet(_G.TradeManage.Pet) then
