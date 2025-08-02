@@ -15,7 +15,6 @@ getgenv().ConfigsKaitun = {
 		["Safe Tree"] = {
 			"Moon Blossom",
 			"Fossilight",
-			"Tomato",
 		}
 	},
 
