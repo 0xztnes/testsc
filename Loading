@@ -57,6 +57,7 @@ _G.TradeManage = {
 	"Minecraft_1u"
     },
     Pet = {
+	"French Fry Ferret",
         "Corrupted Kitsune",
         "Kitsune",
         "Mimic Octopus",
