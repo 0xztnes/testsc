@@ -15,6 +15,7 @@ getgenv().ConfigsKaitun = {
 		["Safe Tree"] = {
 			"Moon Blossom",
 			"Fossilight",
+			"Tomato",
 		}
 	},
 
@@ -23,12 +24,38 @@ getgenv().ConfigsKaitun = {
 			Mode = "Auto", -- Custom , Auto
 			Custom = {
 				"Carrot",
+				"Tomato",
+				"Blueberry",
+				"Corn",
+				"Bamboo",
+				"Starwberry",
+				"Apple",
+				"Pumpkin",
+				"OrangeTulip",
+				"Pepper",
+				"Cactus",
+				"Watermelon",
+				"Mushroom",
+				"GiantPinecone",
 			}
 		},
 		Place = {
 			Mode = "Lock", -- Select , Lock
 			Select = {
 				"Carrot"
+				"Tomato",
+				"Blueberry",
+				"Corn",
+				"Bamboo",
+				"Starwberry",
+				"Apple",
+				"Pumpkin",
+				"OrangeTulip",
+				"Pepper",
+				"Cactus",
+				"Watermelon",
+				"Mushroom",
+				"GiantPinecone",
 			},
 			Lock = {
 				"Maple Apple",
@@ -126,15 +153,6 @@ getgenv().ConfigsKaitun = {
 		Place = {
 			"Gourmet Egg",
 			"Zen Egg",
-			"Primal Egg",
-			"Dinosaur Egg",
-			"Oasis Egg",
-			"Anti Bee Egg",
-			"Night Egg",
-			"Bug Egg",
-			"Paradise Egg",
-			"Bee Egg",
-			"Rare Summer Egg",
 			"Common Summer Egg",
 		},
 		Buy = {
@@ -155,7 +173,6 @@ getgenv().ConfigsKaitun = {
 		["Start Delete Pet At"] = 50,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Kodama"] = { 8, 100, 1 },
 				["Starfish"] = { 8, 100, 1 },
 			},
 			["Limit Upgrade"] = 5,
