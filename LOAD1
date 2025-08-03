@@ -42,19 +42,6 @@ getgenv().ConfigsKaitun = {
 			Mode = "Lock", -- Select , Lock
 			Select = {
 				"Carrot",
-				"Tomato",
-				"Blueberry",
-				"Corn",
-				"Bamboo",
-				"Starwberry",
-				"Apple",
-				"Pumpkin",
-				"OrangeTulip",
-				"Pepper",
-				"Cactus",
-				"Watermelon",
-				"Mushroom",
-				"GiantPinecone",
 			},
 			Lock = {
 				"Maple Apple",
@@ -173,6 +160,7 @@ getgenv().ConfigsKaitun = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 8, 100, 1 },
+				["Capybara"] = { 3, 100, 2 },
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
@@ -180,6 +168,7 @@ getgenv().ConfigsKaitun = {
 				["Ostrich"] = { 3, 100, 2 },
 				["Blood Kiwi"] = { 8, 100 },
 				["Rooster"] = { 8, 100 },
+				["Kodama"] = { 3, 100 },
 			},
 		},
 		Favorite_LockedPet = true,
@@ -207,6 +196,7 @@ getgenv().ConfigsKaitun = {
 			"Red Fox",
 			"Blood Kiwi",
 			["Starfish"] = 10,
+			["Capybara"] = 5,
 			["Rooster"] = 5,
 		},
 		LockPet_Weight = 5, -- if Weight >= 10 they will locked
