@@ -60,7 +60,7 @@ getgenv().ConfigsKaitun = {
 
 	["Seed Pack"] = {
 		Locked = {
-
+			"Zen Seed Pack"
 		}
 	},
 
