@@ -1,45 +1,223 @@
-if not game:IsLoaded() then
-    repeat
-        game.Loaded:Wait()
-    until game:IsLoaded()
-end
+task.wait(5)
+setfpscap(3)
+getgenv().ConfigsKaitun = {
+	["Block Pet Gift"] = false,
+	Collect_Cooldown = 60, -- cooldown to collect fruit
+	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation)
+	
+	["Low Cpu"] = true,
+	["Auto Rejoin"] = true,
+	
+	["Rejoin When Update"] = false,
+	["Limit Tree"] = {
+		["Limit"] = 200,
+		["Destroy Untill"] = 150,
 
-getgenv().KEY = "NASACOMPUTER888"
-_G.TradeManage = {
-    TargetConfigs = {
-        ["Ayoshipship"] = {
-            wantedPets = {"Corrupted Kitsune", "Kitsune", "French Fry Ferret", "Spaghetti Sloth"}
-        },
-        ["OrvilleuMoEfH"] = {
-            wantedPets = {"Corrupted Kitsune", "Kitsune", "French Fry Ferret", "Spaghetti Sloth"}
-        },
-        ["SafiyaAlShafee72"] = {
-            wantedPets = {"Corrupted Kitsune", "Kitsune", "French Fry Ferret", "Spaghetti Sloth"}
-        },
-        ["KingSentz645770"] = {
-            wantedPets = {"Corrupted Kitsune", "Kitsune", "Mimic Octopus", "Dragonfly"}
-        },
-        ["zaq12wsx4z"] = {
-            wantedPets = {"Corrupted Kitsune", "Kitsune", "Mimic Octopus", "Brontosaurus"}
-        },
-        ["19111993k"] = {
-            wantedPets = {"Corrupted Kitsune", "Kitsune", "Disco Bee", "Butterfly"}
-        },
-        ["Taylor117k"] = {
-            wantedPets = {"Capybara", "Mochi Mouse"}
-        },
-        ["oreosandmilk2q"] = {
-            wantedPets = {"Capybara", "Red Fox"}
-        },
-        ["Minecraft_1u"] = {
-            wantedPets = {"Capybara", "Mochi Mouse"}
-        },
-        ["nachan279"] = {
-            wantedPets = {"Capybara", "Red Fox"}
-        }
-    }
+		["Safe Tree"] = {
+			"Tranquil Bloom",
+			"Maple Apple",
+			"Sunflower",
+			"Dragon Pepper",
+			"Elephant Ears",
+			"Moon Melon",
+			"Easter Egg",
+			"Moon Mango",
+			"Bone Blossom",
+			"Fossilight",
+      
+			-- locked fruit for zen event
+			["Tomato"] = 1, ["Strawberry"] = 1, ["Blueberry"] = 1,
+			["Orange Tulip"] = 1, ["Corn"] = 1, ["Daffodil"] = 1,
+			["Bamboo"] = 1, ["Apple"] = 1, ["Coconut"] = 1,
+			["Pumpkin"] = 1, ["Watermelon"] = 1, ["Cactus"] = 1,
+			["Dragon Fruit"] = 1, ["Mango"] = 1, ["Grape"] = 1,
+			["Mushroom"] = 1, ["Pepper"] = 1, ["Cacao"] = 1
+		}
+	},
+
+	Seed = {
+		Buy = {
+			Mode = "Auto", -- Custom , Auto
+			Custom = {
+			}
+		},
+		Place = {
+			Mode = "Lock", -- Select , Lock
+			Select = {
+			},
+			Lock = {
+				"Maple Apple",
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Moon Melon",
+				"Moon Mango",
+				"Bone Blossom",
+				"Fossilight",
+				"Tranquil Bloom",
+			}
+		}
+	},
+
+	["Seed Pack"] = {
+		Locked = {
+
+		}
+	},
+
+	Events = {
+		["Cook Event"] = {
+			Minimum_Money = 1_000_000, -- minimum money to start play this event
+		},
+		["Zen Event"] = {
+			["Restocking"] = { -- Minimumthing to restock
+				Max_Restocks_Price = 3_000_000_000_000,
+				Minimum_Money = 1_000_000,
+				Minimum_Chi = 20
+			},
+			["Doing"] = {
+				Minimum_Money = 1_000_000, -- minimum money to start play this event
+				First_Upgrade_Tree = 0,
+				Maximum_Chi = 9999,
+			}
+		},
+		["Traveling Shop"] = {
+			"Bee Egg",
+		},
+		Craft = {
+			"Anti Bee Egg",
+			"Small Toy",
+			"Small Treat",
+			"Ancient Seed Pack",
+		},
+		Shop = {
+			"Zen Egg",
+			"Pet Shard Tranquil",
+     			"Pet Shard Corrupted",
+		},
+		Start_Do_Honey = 1_000_000 -- start trade fruit for honey at money
+	},
+
+	Gear = {
+		Buy = { 
+			"Watering Can",
+			"Favorite Tool",
+		},
+		Lock = {
+
+		},
+	},
+
+	Eggs = {
+		Place = {
+			"Zen Egg",
+			"Primal Egg",
+			"Dinosaur Egg",
+			"Oasis Egg",
+			"Anti Bee Egg",
+			"Paradise Egg",
+			"Night Egg",
+			"Bug Egg",
+			"Gourmet Egg",
+			"Rare Summer Egg",
+			"Common Summer Egg",
+		},
+		Buy = {
+			"Anti Bee Egg",
+			"Paradise Egg",
+			"Bee Egg",
+			"Night Egg",
+			"Bug Egg",
+			"Gourmet Egg",
+			"Rare Summer Egg",
+			"Common Summer Egg",
+		}
+	},
+
+	Pets = {
+		["Start Delete Pet At"] = 50,
+		["Upgrade Slot"] = {
+			["Pet"] = {
+				["Starfish"] = { 8, 100, 1 },
+			},
+			["Limit Upgrade"] = 5,
+			["Equip When Done"] = {
+				["Tanchozuru"] = { 5, 100, 1 },
+				["Ostrich"] = { 3, 100, 2 },
+				["Blood Kiwi"] = { 8, 100 },
+				["Rooster"] = { 8, 100 },
+			},
+		},
+		Favorite_LockedPet = true,
+		Locked_Pet_Age = 60, -- pet that age > 60 will lock
+		Locked = {
+			"French Fry Ferret",
+			"Spaghetti Sloth",
+			"Corrupted Kitsune",
+			"Raiju",
+			"Koi",
+			"Tanuki",
+			"Tanchozuru",
+			"Kappa",
+			"Kitsune",
+			"Dilophosaurus",
+			"Moon Cat",
+			"Capybara",
+			"Spinosaurus",
+			"Bear Bee",
+			"T-Rex",
+			"Brontosaurus",
+			"Disco Bee",
+			"Butterfly",
+			"Queen Bee",
+			"Dragonfly",
+			"Raccoon",
+			"Fennec Fox",
+			"Mimic Octopus",
+			"Red Fox",
+			"Blood Kiwi",
+			["Starfish"] = 10,
+			["Rooster"] = 5,
+		},
+		LockPet_Weight = 5, -- if Weight >= 10 they will locked
+	},
+
+	Webhook = {
+        UrlPet = "https://discord.com/api/webhooks/1392524927059628204/7IM9d3MXyDc4pDdGwCketDGF7Dq6LbmWXFxDXzyXvIMhdlzqDKJ42JXukKzvH2y2M8OX",
+        UrlSeed = "https://discord.com/api/webhooks/1392525050984267849/WXg4I0Lg0j6Os1p33BxSL1A95g79OY7_fPH6d8EM-P4rh8u12YmSZKtL0O7LYNY_O-Ky",
+        PcName = "SUPERCOMPUTER-NASA-888",
+
+		Noti = {
+			Seeds = {
+				"Tranquil Bloom",
+				"Sunflower",
+				"Dragon Pepper",
+				"Elephant Ears",
+				"Bone Blossom",
+				"Dragon Sapling",
+				"Maple Apple",
+			},
+			SeedPack = {
+				"Idk"
+			},
+			Pets = {
+				"French Fry Ferret",
+				"Corrupted Kitsune",
+				"Kitsune",
+				"Spinosaurus",
+				"T-Rex",
+				"Disco Bee",
+				"Butterfly",
+				"Mimic Octopus",
+				"Queen Bee",
+				"Fennec Fox",
+				"Dragonfly",
+				"Raccoon",
+			},
+			Pet_Weight_Noti = true,
+		}
+	},
 }
-getgenv().YourScript = function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/0xztnes/testsc/refs/heads/main/LOAD1"))()
-end
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
+License = "v8ysS9aq1BxyhsZ84I4Lf5ZN4krGQN8j"
+ 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
