@@ -31,7 +31,7 @@ _G.TradeManage = {
         ["oreosandmilk2q"] = {
             wantedPets = {"Capybara", "Red Fox"}
         },
-        ["Minecraft_1u"] = {
+        ["NoahXShop"] = {
             wantedPets = {"Capybara", "Mochi Mouse"}
         },
         ["nachan279"] = {
