@@ -160,6 +160,7 @@ getgenv().ConfigsKaitun = {
 				["Blood Kiwi"] = { 8, 100, 1 },
 				["Rooster"] = { 8, 100, 2 },
 				["Chicken"] = { 8, 100, 3 },
+				["Seal"] = { 8, 100, 4 },
 			},
 		},
 		Favorite_LockedPet = true,
