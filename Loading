@@ -8,34 +8,34 @@ getgenv().KEY = "NASACOMPUTER888"
 _G.TradeManage = {
     TargetConfigs = {
         ["Ayoshipship"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
 	["OrvilleuMoEfH"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
         ["SafiyaAlShafee72"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
         ["KingSentz645770"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
         ["zaq12wsx4z"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
         ["19111993k"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
         ["Taylor117k"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
         ["oreosandmilk2q"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
         ["NoahXShop"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
         ["nachan279"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse", "Spaghetti Sloth"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         }
     }
 }
