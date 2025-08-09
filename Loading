@@ -13,9 +13,6 @@ _G.TradeManage = {
 	["OrvilleuMoEfH"] = {
             wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
-        ["SafiyaAlShafee72"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
-        },
         ["KingSentz645770"] = {
             wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Mochi Mouse"}
         },
