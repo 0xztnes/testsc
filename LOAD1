@@ -42,6 +42,7 @@ getgenv().ConfigsKaitun = {
 		Buy = {
 			Mode = "Custom", -- Custom , Auto
 			Custom = {
+				"Carrot",
 				"Tomato",
 				"Strawberry",
 				"Bell Pepper",
