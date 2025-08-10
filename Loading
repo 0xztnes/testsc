@@ -8,31 +8,34 @@ getgenv().KEY = "NASACOMPUTER888"
 _G.TradeManage = {
     TargetConfigs = {
         ["Ayoshipship"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Kitsune", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
         },
 	["OrvilleuMoEfH"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Kitsune", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
         },
         ["KingSentz645770"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Kitsune", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
         },
         ["zaq12wsx4z"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Kitsune", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
         },
         ["19111993k"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Kitsune", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
         },
         ["Taylor117k"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Kitsune", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
         },
         ["oreosandmilk2q"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Kitsune", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
         },
         ["NoahXShop"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Kitsune", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+        },
+		["Minecraft_1u"] = {
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
         },
         ["nachan279"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Kitsune", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Capybara", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex"}
         }
     }
 }
