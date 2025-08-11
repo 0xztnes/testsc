@@ -183,6 +183,7 @@ getgenv().ConfigsKaitun = {
 				["Rooster"] = { 8, 100 },
 				["Starfish"] = { 5, 75 },
 				["Spaghetti Sloth"] = { 4, 100 },
+				["Gorilla Chef"] = { 4, 100 },
 				["Koi"] = { 4, 100 },
 			},
 		},
