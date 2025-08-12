@@ -19,8 +19,6 @@ getgenv().ConfigsKaitun = {
 			"Bone Blossom",
 			"Fossilight",
       
-			-- locked fruit for zen event
-			["Tomato"] = 150, ["Strawberry"] = 1, ["Blueberry"] = 1
 		}
 	},
 
@@ -68,7 +66,6 @@ getgenv().ConfigsKaitun = {
 				"Gourmet Egg",
 				"Culinarian Chest",
 				"Gourmet Seed Pack",
-				"Sunny-Side Chicken",
 				-- u can add it more as u want, if it not in list.
 			}
 		},
