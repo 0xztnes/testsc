@@ -164,9 +164,7 @@ getgenv().ConfigsKaitun = {
 			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
 				["Gorilla Chef"] = { 8, 100, 1 },
-				["Blood Kiwi"] = { 8, 100 },
-				["Seal"] = { 8, 100 },
-				["Rooster"] = { 8, 100 },
+				["Seal"] = { 1, 100 },
 			},
 		},
 		Favorite_LockedPet = true,
