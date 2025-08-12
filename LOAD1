@@ -16,20 +16,11 @@ getgenv().ConfigsKaitun = {
 		["Destroy Untill"] = 150,
 
 		["Safe Tree"] = {
-			"Tranquil Bloom",
-			"Maple Apple",
-			"Sunflower",
-			"Dragon Pepper",
-			"Elephant Ears",
-			"Moon Melon",
-			"Easter Egg",
-			"Moon Mango",
 			"Bone Blossom",
 			"Fossilight",
-      		"Serenity",
       
 			-- locked fruit for zen event
-			["Tomato"] = 140, ["Strawberry"] = 5, ["Blueberry"] = 5,
+			["Tomato"] = 150, ["Strawberry"] = 1, ["Blueberry"] = 1,
 		}
 	},
 
