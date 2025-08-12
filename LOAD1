@@ -20,7 +20,7 @@ getgenv().ConfigsKaitun = {
 			"Fossilight",
       
 			-- locked fruit for zen event
-			["Tomato"] = 150, ["Strawberry"] = 1, ["Blueberry"] = 1,
+			["Tomato"] = 150, ["Strawberry"] = 1, ["Blueberry"] = 1
 		}
 	},
 
