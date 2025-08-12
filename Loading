@@ -8,34 +8,34 @@ getgenv().KEY = "NASACOMPUTER888"
 _G.TradeManage = {
     TargetConfigs = {
         ["Ayoshipship"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         },
-	["OrvilleuMoEfH"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+		["OrvilleuMoEfH"] = {
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         },
         ["KingSentz645770"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         },
         ["zaq12wsx4z"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         },
         ["19111993k"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         },
         ["Taylor117k"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         },
         ["oreosandmilk2q"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         },
         ["NoahXShop"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         },
 		["Minecraft_1u"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         },
         ["nachan279"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Hotdog Daschund", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Disco Bee", "Butterfly", "French Fry Ferret", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Lobster Thermidor", "Dilophosaurus", "T-Rex", "Spinosaurus"}
         }
     }
 }
