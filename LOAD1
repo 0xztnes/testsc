@@ -29,7 +29,7 @@ getgenv().ConfigsKaitun = {
       		"Serenity",
       
 			-- locked fruit for zen event
-			["Tomato"] = 5, ["Strawberry"] = 5, ["Blueberry"] = 5,
+			["Tomato"] = 140, ["Strawberry"] = 5, ["Blueberry"] = 5,
 			["Orange Tulip"] = 5, ["Corn"] = 5, ["Daffodil"] = 5,
 			["Bamboo"] = 5, ["Apple"] = 5, ["Coconut"] = 5,
 			["Pumpkin"] = 5, ["Watermelon"] = 5, ["Cactus"] = 5,
