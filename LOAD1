@@ -14,7 +14,7 @@ getgenv().ConfigsKaitun = {
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
 		["Limit"] = 300,
-		["Destroy Untill"] = 280,
+		["Destroy Untill"] = 250,
 
 		["Safe Tree"] = {
 			"Tranquil Bloom",
@@ -43,7 +43,6 @@ getgenv().ConfigsKaitun = {
 		Buy = {
 			Mode = "Custom", -- Custom , Auto
 			Custom = {
-				"Tomato",
 				"Strawberry",
 				"Bell Pepper",
 				"Blood Banana",
