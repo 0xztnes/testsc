@@ -17,7 +17,7 @@ _G.TradeManage = {
             wantedPets = {"French Fry Ferret"}
         },
         ["KingSentz645770"] = {
-            wantedPets = {"Lobster Thermidor"}
+            wantedPets = {"French Fry Ferret"}
         },
         ["zaq12wsx4z"] = {
             wantedPets = {"Lobster Thermidor"}
@@ -26,10 +26,10 @@ _G.TradeManage = {
             wantedPets = {"Lobster Thermidor"}
         },
         ["Taylor117k"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Lobster Thermidor"}
         },
         ["oreosandmilk2q"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Lobster Thermidor"}
         },
 		["Minecraft_1u"] = {
             wantedPets = {"Disco Bee", "Butterfly", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Dilophosaurus", "T-Rex", "Spinosaurus"}
