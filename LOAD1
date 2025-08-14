@@ -196,7 +196,7 @@ getgenv().ConfigsKaitun = {
 				["Gorilla Chef"] = { 8, 100, 1 },
 				["Spaghetti Sloth"] = { 4, 100, 2 },
 				["Tanchozuru"] = { 4, 100, 3 },
-				["Seal"] = { 1, 100 },
+				["Seal"] = { 1, 100, 4 },
 			},
 		},
 		Favorite_LockedPet = true,
