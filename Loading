@@ -32,7 +32,7 @@ _G.TradeManage = {
             wantedPets = {"Lobster Thermidor"}
         },
 		["Minecraft_1u"] = {
-            wantedPets = {"Disco Bee", "Butterfly", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Dilophosaurus", "T-Rex", "Spinosaurus"}
+            wantedPets = {"Golden Goose"}
         },
         ["nachan279"] = {
             wantedPets = {"Disco Bee", "Butterfly", "Brontosaurus", "Mimic Octopus", "Dragonfly", "Red Fox", "Dilophosaurus", "T-Rex", "Spinosaurus"}
